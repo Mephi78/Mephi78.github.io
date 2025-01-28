@@ -1,0 +1,52 @@
+:root {
+	--blog-bg-color: lightslategrey;
+	--blog-headline-color: rgb(255, 170, 0);
+	--blog-text-color: darkslategrey;
+	--blog-col-bg-color: rgba(255, 170, 0, 0.3);
+	
+	/* Grid-Layout */
+	--unit: 1rem;
+}
+
+body {
+	background-color: var(--blog-bg-color);
+	color: var(--blog-text-color);
+	font-family: sans-serif;
+}
+
+main {
+	margin: 0 auto 0 auto;
+	width: 600px;
+}
+
+h1 {
+	color: var(--blog-bg-color);
+	background-color: var(--blog-headline-color);
+	padding: 10px;
+	margin-top: 0px;
+}
+
+p {
+	font-size: 11px;
+	margin: 0 10px 10px 10px;
+}
+
+.blog-grid {
+	--blog-cols: 3; /* change number of columns here */
+	--blog-gaps: calc(var(--blog-cols) - 1 );
+	--blog-space: calc(100% - var(--blog-gaps) * var(--unit));
+	--blog-col-width: calc(var(--blog-space) / var(--blog-cols));
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--unit);
+}
+
+.blog-cell {
+	width: var(--blog-col-width);
+	background-color: var(--blog-col-bg-color);
+}
+
+.blog-cell h2 {
+	font-size: 13px;
+	margin: 10px;
+}
